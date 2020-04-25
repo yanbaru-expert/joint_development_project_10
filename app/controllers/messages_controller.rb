@@ -7,6 +7,10 @@ class MessagesController < ApplicationController
         @message = Message.new
     end
 
+    def show
+        @message= Message.find(params[:id])
+      end
+
     def create
         Message.create(messge_params)
       end
@@ -15,5 +19,7 @@ class MessagesController < ApplicationController
       def message_params
         params.require(:message).permit(:name, :age)
       end
+
+    end
 
 end
