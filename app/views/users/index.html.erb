@@ -1,11 +1,10 @@
 <h1>ユーザー 一覧</h1>
-<% @users.each do |user| %>
+<% @messages.each do |message| %>
 <p>
-<%= user.name %>
-<%= link_to "詳細", user_path(user.id) %>
-<%= link_to "編集", edit_user_path(user.id) %>
-<%= link_to "削除", user_path(user.id), method: :delete, data: {confirm: "削除しますか？"} %>
+<%= message.name %>
+<%= link_to "詳細", message_path(message.id) %>
+<%= link_to "編集", edit_message_path(message.id) %>
+<%= link_to "削除", message_path(message.id), method: :delete, data: {confirm: "削除しますか？"} %>
 </p>
 <% end %>
-<%= link_to "投稿画面へ", new_user_path %>
-
+<%= link_to "投稿画面へ", new_message_path %>
