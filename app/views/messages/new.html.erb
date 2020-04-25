@@ -1,7 +1,7 @@
 <h1>メッセージ 作成</h1>
 <%= form_for @message, url: "/messages", html: { method: :post} do |f| %>
   <p>タイトル <%= f.text_field :name %></p>
-  <p>内容 <%= f.text_field :age %></p>
+  <p>内容 <%= f.text_field :content %></p>
   <input type="submit" value="送信">
 <% end %>
 <%= link_to "一覧画面へ", messages_path %>
