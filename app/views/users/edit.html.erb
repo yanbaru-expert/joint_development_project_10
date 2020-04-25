@@ -1,7 +1,7 @@
 <h1>編集ページ</h1>
-<%= form_for @user, url: user_path(@user.id), html: { method: :PATCH} do |f| %>
+<%= form_for @message, url: message_path(@message.id), html: { method: :PATCH} do |f| %>
   <p>氏名 <%= f.text_field :name %></p>
   <p>年齢 <%= f.text_field :age %></p>
   <input type="submit" value="送信">
 <% end %>
-<%= link_to "一覧画面へ", users_path %>
+<%= link_to "一覧画面へ", messages_path %>
