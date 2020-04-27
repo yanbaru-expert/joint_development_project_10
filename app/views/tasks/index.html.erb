@@ -1,0 +1,7 @@
+<h1>タスク 一覧</h1>
+<% @tasks.each do |task| %>
+<p>
+<%= task.title %>
+</p>
+<% end %>
+<%= link_to "投稿画面へ", new_task_path %>
