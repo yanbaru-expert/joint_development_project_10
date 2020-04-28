@@ -1,0 +1,7 @@
+<h1>編集ページ</h1>
+<%= form_for @task, url: task_path(@task.id), html: { method: :PATCH} do |f| %>
+  <p>氏名 <%= f.text_field :title %></p>
+  <p>年齢 <%= f.text_field :content %></p>
+  <input type="submit" value="送信">
+<% end %>
+<%= link_to "一覧画面へ", task_path %>
